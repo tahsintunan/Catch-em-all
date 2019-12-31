@@ -907,10 +907,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a57bde8976971564fb942420bf7e0099, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startTimeBtwSpawns: 0
+  startTimeBtwSpawns: 22.5
   timeDecrease: 0
   minTime: 0
-  obstacleTemplate: []
+  obstacleTemplate:
+  - {fileID: 1032804587277986638, guid: 88294b302894cd9499386bbd9e493d63, type: 3}
+  - {fileID: 5714018118437633261, guid: c86ad975a8de7d14d9b1c89dfffe7313, type: 3}
+  - {fileID: 2856332104218003931, guid: f8171fdfe34367e45aa175074d6f1262, type: 3}
+  - {fileID: 3671075910872705165, guid: 77e3d1cabc824b9458873bff664c41d8, type: 3}
+  - {fileID: 3382845202665460905, guid: a687420492f6905459301d83c4bece09, type: 3}
+  - {fileID: 6654475568726796577, guid: 1be4f631455d8544ab783933c9e51291, type: 3}
+  - {fileID: 5972493486317818126, guid: 6a0c08a9434c44148b91c472beccf900, type: 3}
 --- !u!4 &741726396
 Transform:
   m_ObjectHideFlags: 0
@@ -923,7 +930,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &754467394
 GameObject:
@@ -2628,10 +2635,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a57bde8976971564fb942420bf7e0099, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startTimeBtwSpawns: 0
+  startTimeBtwSpawns: 32.5
   timeDecrease: 0
   minTime: 0
-  obstacleTemplate: []
+  obstacleTemplate:
+  - {fileID: 3136589538056442408, guid: 19d51e1711200ce43bfb63857b5a8218, type: 3}
+  - {fileID: 3721383067962804469, guid: c16a26718ceb49248b5f37159f1de96d, type: 3}
+  - {fileID: 2006179101955489440, guid: 5d8295f840cf4e240bafdca13d4318b2, type: 3}
+  - {fileID: 6046749761967357436, guid: ed82833da1b174048b8dfd6e7190a258, type: 3}
+  - {fileID: 3873839321322089639, guid: 14b9146152a3e2048aeb090a09e756c9, type: 3}
+  - {fileID: 5884308986577040967, guid: 5e2f56c13f2f06449963945aabc2ffa9, type: 3}
+  - {fileID: 361952856326942944, guid: 300bb13ce423d854fb9b4b73f7944af9, type: 3}
 --- !u!4 &1613731776
 Transform:
   m_ObjectHideFlags: 0
@@ -2644,7 +2658,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1714191075
 GameObject:
