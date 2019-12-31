@@ -112,4 +112,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 1
   point: 5
-  speed: 3
+  speed: 6
+  Deffect: {fileID: 7279814156403417799, guid: 2ca1c0b71ca0fbf43a7edc4624d39854, type: 3}
+  Peffect: {fileID: 4935375152387141633, guid: ea704cc44389c6841be1dfb5c88cf9bb, type: 3}

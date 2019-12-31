@@ -8,6 +8,16 @@ public class BlueObstacle : MonoBehaviour
     public int point = 5;
     public float speed;
 
+    public GameObject Deffect;
+    public GameObject Peffect;
+
+    private Shake shake;
+
+    private void Start()
+    {
+        shake = GameObject.FindGameObjectWithTag("ScreenShake").GetComponent<Shake>();
+    }
+
     private void Update()
     {
         transform.Translate(Vector2.left * speed * Time.deltaTime);
@@ -17,6 +27,9 @@ public class BlueObstacle : MonoBehaviour
     {
         if (other.CompareTag("PlayerRed"))
         {
+            Instantiate(Deffect, transform.position, Quaternion.identity);
+            shake.CamShake();
+
             other.GetComponentInParent<Basic>().health -= damage;
             Debug.Log(other.GetComponentInParent<Basic>().health);
 
@@ -24,6 +37,8 @@ public class BlueObstacle : MonoBehaviour
         }
         else if (other.CompareTag("PlayerBlue"))
         {
+            Instantiate(Peffect, transform.position, Quaternion.identity);
+
             other.GetComponentInParent<Basic>().score += point;
             Debug.Log(other.GetComponentInParent<Basic>().score);
 
@@ -31,6 +46,9 @@ public class BlueObstacle : MonoBehaviour
         }
         else if (other.CompareTag("GreatBar"))
         {
+            Instantiate(Deffect, transform.position, Quaternion.identity);
+            shake.CamShake();
+
             other.GetComponentInParent<Basic>().health -= damage;
             Debug.Log(other.GetComponentInParent<Basic>().health);
 

@@ -7,6 +7,7 @@ TagManager:
   - PlayerBlue
   - PlayerRed
   - GreatBar
+  - ScreenShake
   layers:
   - Default
   - TransparentFX
