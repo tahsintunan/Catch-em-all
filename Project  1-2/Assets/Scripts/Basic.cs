@@ -25,6 +25,11 @@ public class Basic : MonoBehaviour
 
         if (health <= 0)
         {
+            if (PlayerPrefs.GetFloat("Highscore") < score)
+            {
+                PlayerPrefs.SetFloat("Highscore", score);
+            }
+
             gameOver.SetActive(true);
             Destroy(gameObject);
         }
