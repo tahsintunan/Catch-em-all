@@ -11,6 +11,9 @@ public class BlueObstacle : MonoBehaviour
     public GameObject Deffect;
     public GameObject Peffect;
 
+    public GameObject DamageSound;
+    public GameObject PointSound;
+
     private Shake shake;
 
     private void Start()
@@ -27,6 +30,7 @@ public class BlueObstacle : MonoBehaviour
     {
         if (other.CompareTag("PlayerRed"))
         {
+            Instantiate(DamageSound, transform.position, Quaternion.identity);
             Instantiate(Deffect, transform.position, Quaternion.identity);
             shake.CamShake();
 
@@ -37,6 +41,7 @@ public class BlueObstacle : MonoBehaviour
         }
         else if (other.CompareTag("PlayerBlue"))
         {
+            Instantiate(PointSound, transform.position, Quaternion.identity);
             Instantiate(Peffect, transform.position, Quaternion.identity);
 
             other.GetComponentInParent<Basic>().score += point;
@@ -46,6 +51,7 @@ public class BlueObstacle : MonoBehaviour
         }
         else if (other.CompareTag("GreatBar"))
         {
+            Instantiate(DamageSound, transform.position, Quaternion.identity);
             Instantiate(Deffect, transform.position, Quaternion.identity);
             shake.CamShake();
 

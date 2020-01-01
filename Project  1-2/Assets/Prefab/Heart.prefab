@@ -113,3 +113,5 @@ MonoBehaviour:
   life: 1
   speed: 7
   Deffect: {fileID: 4172951856552301308, guid: 843f1bdb9d77dfa448bebf4ed3fc95a2, type: 3}
+  HealthSound: {fileID: 5243812924745374742, guid: 566ee7561e505e147a6c28c13e6ec7a3,
+    type: 3}

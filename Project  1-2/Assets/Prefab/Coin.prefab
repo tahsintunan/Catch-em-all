@@ -97,6 +97,8 @@ MonoBehaviour:
   point: 20
   speed: 7
   effect: {fileID: 8021545524228178126, guid: 32949f4eb6739d947a8d42a7ce6f4c95, type: 3}
+  CoinSound: {fileID: 4202038392437394857, guid: dea86d7c51c5a0f41afbb3d19455f28e,
+    type: 3}
 --- !u!58 &4852646934119871761
 CircleCollider2D:
   m_ObjectHideFlags: 0

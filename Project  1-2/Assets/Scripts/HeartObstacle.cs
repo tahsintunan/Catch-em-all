@@ -9,6 +9,8 @@ public class HeartObstacle : MonoBehaviour
 
     public GameObject Deffect;
 
+    public GameObject HealthSound;
+
     private void Update()
     {
         transform.Translate(Vector2.left * speed * Time.deltaTime);
@@ -18,6 +20,7 @@ public class HeartObstacle : MonoBehaviour
     {
         if (other.CompareTag("PlayerRed"))
         {
+            Instantiate(HealthSound, transform.position, Quaternion.identity);
             Instantiate(Deffect, transform.position, Quaternion.identity);
             if (other.GetComponentInParent<Basic>().health <5)
                 other.GetComponentInParent<Basic>().health += life;
@@ -27,6 +30,7 @@ public class HeartObstacle : MonoBehaviour
         }
         else if (other.CompareTag("PlayerBlue"))
         {
+            Instantiate(HealthSound, transform.position, Quaternion.identity);
             Instantiate(Deffect, transform.position, Quaternion.identity);
             if (other.GetComponentInParent<Basic>().health < 5)
                 other.GetComponentInParent<Basic>().health += life;

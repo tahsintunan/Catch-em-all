@@ -9,6 +9,8 @@ public class CoinObstacle : MonoBehaviour
 
     public GameObject effect;
 
+    public GameObject CoinSound;
+
     private void Update()
     {
         transform.Translate(Vector2.left * speed * Time.deltaTime);
@@ -18,6 +20,7 @@ public class CoinObstacle : MonoBehaviour
     {
         if (other.CompareTag("PlayerBlue"))
         {
+            Instantiate(CoinSound, transform.position, Quaternion.identity);
             Instantiate(effect, transform.position, Quaternion.identity);
 
             other.GetComponentInParent<Basic>().score += point;
@@ -27,6 +30,7 @@ public class CoinObstacle : MonoBehaviour
         }
         else if (other.CompareTag("PlayerRed"))
         {
+            Instantiate(CoinSound, transform.position, Quaternion.identity);
             Instantiate(effect, transform.position, Quaternion.identity);
 
             other.GetComponentInParent<Basic>().score += point;

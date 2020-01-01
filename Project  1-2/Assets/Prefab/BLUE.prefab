@@ -115,3 +115,7 @@ MonoBehaviour:
   speed: 6
   Deffect: {fileID: 7279814156403417799, guid: 2ca1c0b71ca0fbf43a7edc4624d39854, type: 3}
   Peffect: {fileID: 4935375152387141633, guid: ea704cc44389c6841be1dfb5c88cf9bb, type: 3}
+  DamageSound: {fileID: 4350452621583489669, guid: ca4643749099fc34192b01b90844e5f1,
+    type: 3}
+  PointSound: {fileID: 6196963959974836717, guid: f40c1ff7cbd2b964d8994327b9e9b984,
+    type: 3}
