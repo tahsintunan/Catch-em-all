@@ -8,6 +8,7 @@ TagManager:
   - PlayerRed
   - GreatBar
   - ScreenShake
+  - SheraBar
   layers:
   - Default
   - TransparentFX
