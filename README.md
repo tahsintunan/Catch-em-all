@@ -1,2 +1,2 @@
-# SWE-18-Project-Work-2nd-Semester-
-This game is a project work of SWE-18 Project Work (1st Year 2nd Semester).
+# Catch-em-all
+This game is a project work for the 2nd semester of the 1st year of batch SWE-18
