@@ -6,8 +6,8 @@
 2D endless runner.
 * **Platform:** PC
 * **Control:**
-  * Blue bar Up/Down - W/S
-  * Red Bar Up/Down - UpArrow/DownArrow
+  * Blue bar Up/Down - *W/S*
+  * Red Bar Up/Down - *UpArrow/DownArrow*
 * **Game Start:**
 You start with 0 points and 3 health points. Health points can be maxed up to 5 by absorbing life boosts.
 * **Goal:**
