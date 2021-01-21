@@ -2,9 +2,11 @@
 
 ###### *There's no clear reason why I named it Catch 'em All. I guess I used it as a placeholder and never bothered to change it again.*
 
+### To play the game, just download the "Game" folder and start the game by clicking on "Catch_em All.exe" file. 
+
 * **Genre:**
 2D endless runner.
-* **Platform:** PC
+* **Platform:** PC *(Windows only)*
 * **Control:**
   * Blue bar Up/Down - *W/S*
   * Red Bar Up/Down - *UpArrow/DownArrow*
