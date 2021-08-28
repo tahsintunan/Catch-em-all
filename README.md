@@ -6,12 +6,14 @@
 
 * **Genre:**
 2D endless runner.
-* **Platform:** PC *(Windows only)*
+* **Platform:** PC *(Windows and Mac only)*
 * **Control:**
   * Blue bar Up/Down - *W/S*
   * Red Bar Up/Down - *UpArrow/DownArrow*
 * **Game Start:**
 You start with 0 points and 3 health points. Health points can be maxed up to 5 by absorbing life boosts.
+* **Difficulty Curve:**
+The game **does not** have discrete levels. Instead, the dificulty ramps up dynamically as the game progresses by decreasing the time-gap between the spawns.
 * **Goal:**
 Score as much as you can. Beat your own highscore. Set record. You score points by doing the following: 
   * Catching the red balls with the red bar **(5 points)**
