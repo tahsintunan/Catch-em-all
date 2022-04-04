@@ -1,9 +1,14 @@
-# Catch-em-all
+# Catch 'em All
 
-###### *There's no clear reason why I named it Catch 'em All. I guess I used it as a placeholder and never bothered to change it again.*
+###### *There's really no reason why I named it Catch 'em All. I guess I used it as a placeholder and never bothered to change it again.*
 
-### To play the game, just download the "Game" folder and start the game by clicking on "Catch_em All.exe" file. 
+### To play the game
+- Download the _**Catch.em.All.zip**_ file from the releases section
+- Extract the zip file in your preferred directory
+- Inside the folder, start the game by running the _**Catch_em All.exe**_ file
 
+
+### Details
 * **Genre:**
 2D endless runner.
 * **Platform:** PC *(Windows and Mac only)*
