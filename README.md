@@ -3,9 +3,9 @@
 ###### *There's really no reason why I named it Catch 'em All. I guess I used it as a placeholder and never bothered to change it again.*
 
 ### To play the game
-- Download the _**Catch.em.All.zip**_ file from the releases section
-- Extract the zip file in your preferred directory
-- Inside the folder, start the game by running the _**Catch_em All.exe**_ file
+- Download the _**Catch.em.All.zip**_ file from [here](https://github.com/tahsintunan/Catch-em-all/releases/tag/v1.0.0)
+- Extract the zip file to your preferred directory
+- Inside the folder, run _**Catch_em All.exe**_ to play
 
 
 ### Details
