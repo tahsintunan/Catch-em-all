@@ -5,7 +5,7 @@ using UnityEngine;
 abstract class Item : MonoBehaviour
 {
     public float speed;
-    private Shake shake;
+    public Shake shake;
 
     private void Start()
     {

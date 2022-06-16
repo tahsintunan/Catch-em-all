@@ -8,5 +8,6 @@ public class SpawnPoint : MonoBehaviour
 
     private void Start()
     {
-        Instantiate(obstacle, transform.position, Quaternion.identity);    }
+        Instantiate(obstacle, transform.position, Quaternion.identity);
+    }
 }

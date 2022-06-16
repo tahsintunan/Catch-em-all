@@ -7,7 +7,6 @@ public class HeartItem : Item
     public int life = 1;
     public GameObject effect;
     public GameObject healthSound;
-    public float speed;
 
 
     override void OnTriggerEnter2D(Collider2D other)
@@ -20,8 +19,8 @@ public class HeartItem : Item
         {
             Instantiate(healthSound, transform.position, Quaternion.identity);
             Instantiate(effect, transform.position, Quaternion.identity);
-            if (other.GetComponentInParent<Basic>().health <5)
-                other.GetComponentInParent<Basic>().health += life;
+            if (other.GetComponentInParent<GameSession>().health < other.GetComponentInParent<GameSession>().maxHealth)
+                other.GetComponentInParent<GameSession>().health += life;
             Destroy(gameObject);
         }
     }

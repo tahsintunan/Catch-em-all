@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
-public class HSScript : MonoBehaviour
+public class HighscoreController : MonoBehaviour
 {
     public TextMeshProUGUI HighScore;
 

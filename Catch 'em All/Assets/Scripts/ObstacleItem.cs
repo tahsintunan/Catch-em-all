@@ -6,7 +6,6 @@ public class ObstacleItem : Item
 {
     public int damage = 1;
     public int point = 5;
-    public float speed;
 
     public GameObject damageEffect;
     public GameObject pointEffect;
@@ -14,26 +13,28 @@ public class ObstacleItem : Item
     public GameObject damageSound;
     public GameObject pointSound;
 
-    public string sameColor;
+    public string color;    // "PlayerBlue" or "PlayerRed"
 
 
     override void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag(sameColor))
+        // If the player gets hit by a same color obstacle, the player will get points.
+        if (other.CompareTag(color))
         {
             Instantiate(pointSound, transform.position, Quaternion.identity);
             Instantiate(pointEffect, transform.position, Quaternion.identity);
             shake.CamShake();
-            other.GetComponentInParent<Basic>().score += point;
+            other.GetComponentInParent<GameSession>().score += point;
             Destroy(gameObject);
             break;
         }
+        // If the player gets hit by a different color obstacle, the player will get damage.
         else
         {
             Instantiate(damageSound, transform.position, Quaternion.identity);
             Instantiate(damageEffect, transform.position, Quaternion.identity);
             shake.CamShake();
-            other.GetComponentInParent<Basic>().health -= damage;
+            other.GetComponentInParent<GameSession>().health -= damage;
             Destroy(gameObject);
         }
     }
