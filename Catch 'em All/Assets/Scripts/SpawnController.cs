@@ -1,26 +1,42 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class SpawnController : MonoBehaviour
 {
-    public GameObject obstacle;
-
-    private float curTimeBetweenSpawn;
-    public float timeBetweenSpawn;
+    public GameObject item;
+    public float initialTimeBetweenSpawn;
     public float timeDecrement;
     public float minTime;
-
-    private void update()
+    public float maxY;
+    public float minY;
+    public float spawnX;
+    private float _timeBetweenSpawn;
+    private float _curTimeBetweenSpawn;
+    
+    private void Start()
     {
-        if (curTimeBetweenSpawn > 0)
+        _timeBetweenSpawn = initialTimeBetweenSpawn;
+        _curTimeBetweenSpawn = _timeBetweenSpawn;
+    }
+
+    private void Update()
+    {
+        if (_curTimeBetweenSpawn > 0)
         {
-            curTimeBetweenSpawn -= Time.deltaTime;
-            continue;
+            _curTimeBetweenSpawn -= Time.deltaTime;
         }
-        Instantiate(obstacle);
-        curTimeBetweenSpawn = timeBetweenSpawn;
-        if (timeBetweenSpawn > minTime)
-            timeBetweenSpawn -= timeDecrement;
+        else
+        {
+            SpawnItem();
+            _curTimeBetweenSpawn = _timeBetweenSpawn;
+            if (_timeBetweenSpawn > minTime)
+                _timeBetweenSpawn -= timeDecrement;
+        }
+    }
+
+    private void SpawnItem()
+    {
+        var position = new Vector3(spawnX,Random.Range(minY, maxY),0);
+        Instantiate(item, position, Quaternion.identity);
     }
 }

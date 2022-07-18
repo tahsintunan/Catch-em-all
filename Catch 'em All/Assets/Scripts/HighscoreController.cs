@@ -1,15 +1,12 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.UI;
+﻿using UnityEngine;
 using TMPro;
 
 public class HighscoreController : MonoBehaviour
 {
-    public TextMeshProUGUI HighScore;
+    public TextMeshProUGUI highScore;
 
     private void Start()
     {
-        HighScore.text = ((int)PlayerPrefs.GetFloat("Highscore")).ToString();
+        highScore.text = ((int)PlayerPrefs.GetFloat("Highscore")).ToString();
     }
 }

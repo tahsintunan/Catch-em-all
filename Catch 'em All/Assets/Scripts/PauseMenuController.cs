@@ -1,43 +1,38 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.SceneManagement;
+﻿using UnityEngine;
 
 public class PauseMenuController : MonoBehaviour
 {
-    public static bool gameIsPaused = false;
     public GameObject pauseMenuUI;
-    public GameObject motherObject;
-
+    public GameSession gameSession;
+    private bool _gameIsPaused = false;
+    
+    
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
-            togglePauseMenu();
+        if (Input.GetKeyDown(KeyCode.Escape) && gameSession.health > 0)
+            TogglePauseMenu();
     }
 
-    public void togglePauseMenu()
+    private void TogglePauseMenu()
     {
-        if (motherObject.GetComponent<GameSession>().health > 0)
-        {
-            if (gameIsPaused)
-                Resume();
-            else
-                Pause();
-        }
+        if (_gameIsPaused)
+            Resume();
+        else
+            Pause();
     }
 
-    public void Resume()
+    private void Resume()
     {
         pauseMenuUI.SetActive(false);
         Time.timeScale = 1f;
-        gameIsPaused = false;
+        _gameIsPaused = false;
     }
 
-    void Pause()
+    private void Pause()
     {
         pauseMenuUI.SetActive(true);
         Time.timeScale = 0f;
-        gameIsPaused = true;
+        _gameIsPaused = true;
     }
 
 }

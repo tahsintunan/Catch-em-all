@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class HeartItem : Item
 {
@@ -9,7 +7,7 @@ public class HeartItem : Item
     public GameObject healthSound;
 
 
-    override void OnTriggerEnter2D(Collider2D other)
+    public override void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("GreatBar"))
         {
@@ -17,8 +15,10 @@ public class HeartItem : Item
         }
         else
         {
-            Instantiate(healthSound, transform.position, Quaternion.identity);
-            Instantiate(effect, transform.position, Quaternion.identity);
+            var position = transform.position;
+            Instantiate(healthSound, position, Quaternion.identity);
+            Instantiate(effect, position, Quaternion.identity);
+            shake.CamShake();
             if (other.GetComponentInParent<GameSession>().health < other.GetComponentInParent<GameSession>().maxHealth)
                 other.GetComponentInParent<GameSession>().health += life;
             Destroy(gameObject);

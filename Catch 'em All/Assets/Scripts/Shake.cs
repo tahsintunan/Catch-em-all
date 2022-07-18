@@ -1,13 +1,12 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class Shake : MonoBehaviour
 {
     public Animator camAnim;
+    private static readonly int ShakeId = Animator.StringToHash("shake");
 
     public void CamShake()
     {
-        camAnim.SetTrigger("shake");
+        camAnim.SetTrigger(ShakeId);
     }
 }

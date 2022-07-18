@@ -1,12 +1,10 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-abstract class Item : MonoBehaviour
+public abstract class Item : MonoBehaviour
 {
     public float speed;
-    public Shake shake;
-
+    protected Shake shake;
+    
     private void Start()
     {
         shake = GameObject.FindGameObjectWithTag("ScreenShake").GetComponent<Shake>();
@@ -14,7 +12,7 @@ abstract class Item : MonoBehaviour
 
     private void Update()
     {
-        transform.Translate(Vector2.left * speed * Time.deltaTime);
+        transform.Translate(Vector2.left * (speed * Time.deltaTime));
     }
 
     public abstract void OnTriggerEnter2D(Collider2D other);

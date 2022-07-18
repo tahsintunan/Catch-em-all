@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class CoinItem : Item
 {
@@ -9,7 +7,7 @@ public class CoinItem : Item
     public GameObject coinSound;
 
 
-    override void OnTriggerEnter2D(Collider2D other)
+    public override void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("GreatBar"))
         {
@@ -17,8 +15,10 @@ public class CoinItem : Item
         }
         else
         {
-            Instantiate(coinSound, transform.position, Quaternion.identity);
-            Instantiate(effect, transform.position, Quaternion.identity);
+            var position = transform.position;
+            Instantiate(coinSound, position, Quaternion.identity);
+            Instantiate(effect, position, Quaternion.identity);
+            shake.CamShake();
             other.GetComponentInParent<GameSession>().score += point;
             Destroy(gameObject);
         }

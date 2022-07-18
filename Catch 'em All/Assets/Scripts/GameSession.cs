@@ -1,8 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.SceneManagement;
-using UnityEngine.UI;
+﻿using UnityEngine;
 using TMPro;
 
 public class GameSession : MonoBehaviour
@@ -20,21 +16,20 @@ public class GameSession : MonoBehaviour
 
     private void Update()
     {
-        updateUI();
-        if (health <= 0)
-        {
-            if (PlayerPrefs.GetFloat("Highscore") < score)
-                PlayerPrefs.SetFloat("Highscore", score);
-            gameOver.SetActive(true);
-            Destroy(gameObject);
-        }
+        UpdateUI();
+        if (health > 0) return;
+        if (PlayerPrefs.GetFloat("Highscore") < score)
+            PlayerPrefs.SetFloat("Highscore", score);
+        gameOver.SetActive(true);
+        Time.timeScale = 0.1f;
+        Destroy(gameObject);
     }
 
-    private void updateUI()
+    private void UpdateUI()
     {
         healthDisplay.text = health.ToString();
         scoreDisplay.text = score.ToString();
-        scoreText.text = "Your Score is " + score.ToString();
+        scoreText.text = "Your Score is " + score;
     }
 }
 
