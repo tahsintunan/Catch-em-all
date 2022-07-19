@@ -99,9 +99,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 7
-  shake: {fileID: 0}
   point: 20
-  effect: {fileID: 8021545524228178126, guid: 32949f4eb6739d947a8d42a7ce6f4c95, type: 3}
+  coinEffect: {fileID: 8021545524228178126, guid: 32949f4eb6739d947a8d42a7ce6f4c95,
+    type: 3}
   coinSound: {fileID: 4202038392437394857, guid: dea86d7c51c5a0f41afbb3d19455f28e,
     type: 3}
 --- !u!58 &4852646934119871761

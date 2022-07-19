@@ -14,24 +14,17 @@ public class ObstacleItem : Item
     public override void OnTriggerEnter2D(Collider2D other)
     {
         var position = transform.position;
+        var session = other.GetComponentInParent<GameSession>();
         
-        // If the player gets hit by a same color obstacle, the player will get points.
         if (other.CompareTag(color))
         {
-            Instantiate(pointSound, position, Quaternion.identity);
-            Instantiate(pointEffect, position, Quaternion.identity);
-            shake.CamShake();
-            other.GetComponentInParent<GameSession>().score += point;
-            Destroy(gameObject);
+            session.score += point;
+            InitiateCollisionEffects(pointSound, pointEffect, position);
         }
-        // If the player gets hit by a different color obstacle, the player will get damage.
         else
         {
-            Instantiate(damageSound, position, Quaternion.identity);
-            Instantiate(damageEffect, position, Quaternion.identity);
-            shake.CamShake();
-            other.GetComponentInParent<GameSession>().health -= damage;
-            Destroy(gameObject);
+            session.health -= damage;
+            InitiateCollisionEffects(damageSound, damageEffect, position);
         }
     }
 }

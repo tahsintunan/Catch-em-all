@@ -115,8 +115,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 7
-  shake: {fileID: 0}
   life: 1
-  effect: {fileID: 570367283707310237, guid: a76ba48a67e6e4b46adb0c9953e66bd9, type: 3}
+  healthEffect: {fileID: 570367283707310237, guid: a76ba48a67e6e4b46adb0c9953e66bd9,
+    type: 3}
   healthSound: {fileID: 5243812924745374742, guid: 566ee7561e505e147a6c28c13e6ec7a3,
     type: 3}

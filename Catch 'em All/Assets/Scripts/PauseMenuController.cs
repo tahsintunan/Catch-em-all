@@ -4,7 +4,7 @@ public class PauseMenuController : MonoBehaviour
 {
     public GameObject pauseMenuUI;
     public GameSession gameSession;
-    private bool _gameIsPaused = false;
+    private bool _gameIsPaused;
     
     
     private void Update()

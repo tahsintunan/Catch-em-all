@@ -3,7 +3,7 @@
 public class CoinItem : Item
 {
     public int point = 20;
-    public GameObject effect;
+    public GameObject coinEffect;
     public GameObject coinSound;
 
 
@@ -15,12 +15,8 @@ public class CoinItem : Item
         }
         else
         {
-            var position = transform.position;
-            Instantiate(coinSound, position, Quaternion.identity);
-            Instantiate(effect, position, Quaternion.identity);
-            shake.CamShake();
             other.GetComponentInParent<GameSession>().score += point;
-            Destroy(gameObject);
+            InitiateCollisionEffects(coinSound, coinEffect, transform.position);
         }
     }
 }

@@ -3,7 +3,7 @@
 public class HeartItem : Item
 {
     public int life = 1;
-    public GameObject effect;
+    public GameObject healthEffect;
     public GameObject healthSound;
 
 
@@ -15,13 +15,12 @@ public class HeartItem : Item
         }
         else
         {
-            var position = transform.position;
-            Instantiate(healthSound, position, Quaternion.identity);
-            Instantiate(effect, position, Quaternion.identity);
-            shake.CamShake();
-            if (other.GetComponentInParent<GameSession>().health < other.GetComponentInParent<GameSession>().maxHealth)
-                other.GetComponentInParent<GameSession>().health += life;
-            Destroy(gameObject);
+            var session = other.GetComponentInParent<GameSession>();
+            if (session.health < session.maxHealth)
+            {
+                session.health += life;
+            }
+            InitiateCollisionEffects(healthSound, healthEffect, transform.position);
         }
     }
 }
