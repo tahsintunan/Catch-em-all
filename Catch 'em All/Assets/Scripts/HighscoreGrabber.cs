@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using TMPro;
 
-public class HighscoreController : MonoBehaviour
+public class HighscoreGrabber : MonoBehaviour
 {
     public TextMeshProUGUI highScore;
 

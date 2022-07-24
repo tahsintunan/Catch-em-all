@@ -3,10 +3,10 @@ using Random = UnityEngine.Random;
 
 public class SpawnController : MonoBehaviour
 {
-    public GameObject item;
+    public Item item;
     public float initialTimeBetweenSpawn;
     public float timeDecrement;
-    public float minTime;
+    public float minTimeBetweenSpawn;
     public float maxY;
     public float minY;
     public float spawnX;
@@ -29,7 +29,7 @@ public class SpawnController : MonoBehaviour
         {
             SpawnItem();
             _curTimeBetweenSpawn = _timeBetweenSpawn;
-            if (_timeBetweenSpawn > minTime)
+            if (_timeBetweenSpawn > minTimeBetweenSpawn)
                 _timeBetweenSpawn -= timeDecrement;
         }
     }

@@ -167,13 +167,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7ed1f96523122647bbd502b13aae310, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  item: {fileID: 9123628514234052118, guid: 70b145a343d764442a8ef0a88f245bc1, type: 3}
-  initialTimeBetweenSpawn: 15
+  item: {fileID: 4489906143966260798, guid: 70b145a343d764442a8ef0a88f245bc1, type: 3}
+  initialTimeBetweenSpawn: 25
   timeDecrement: 0.25
-  minTime: 5
+  minTime: 10
   maxY: 5.2
   minY: -3.3
-  spawnX: 21
+  spawnX: 15
 --- !u!1 &46093551
 GameObject:
   m_ObjectHideFlags: 0
@@ -405,37 +405,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 65604262}
   m_CullTransparentMesh: 0
---- !u!1 &76091174
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 76091175}
-  m_Layer: 0
-  m_Name: Game Session Manager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &76091175
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 76091174}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.8634844, y: -0.000009536743, z: -0.80836105}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 10
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &130181866
 GameObject:
   m_ObjectHideFlags: 0
@@ -648,9 +617,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7ed1f96523122647bbd502b13aae310, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  item: {fileID: 4035468176912360189, guid: 8ecaf480842147025bb734411a0a3261, type: 3}
+  item: {fileID: 8276241927913043083, guid: 8ecaf480842147025bb734411a0a3261, type: 3}
   initialTimeBetweenSpawn: 4
-  timeDecrement: 0.1
+  timeDecrement: 0.25
   minTime: 1
   maxY: 5.2
   minY: -3.3
@@ -1011,9 +980,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7ed1f96523122647bbd502b13aae310, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  item: {fileID: 552101947698204083, guid: 2b52f77773db2b251b773e2c6fd44653, type: 3}
+  item: {fileID: 5150868763278053563, guid: 2b52f77773db2b251b773e2c6fd44653, type: 3}
   initialTimeBetweenSpawn: 4
-  timeDecrement: 0.1
+  timeDecrement: 0.25
   minTime: 1
   maxY: 5.2
   minY: -3.3
@@ -2595,7 +2564,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7ed1f96523122647bbd502b13aae310, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  item: {fileID: 4852646934119871757, guid: 63a5b09820bf31c428e5a2fe45d522aa, type: 3}
+  item: {fileID: 4852646934119871760, guid: 63a5b09820bf31c428e5a2fe45d522aa, type: 3}
   initialTimeBetweenSpawn: 15
   timeDecrement: 0.25
   minTime: 5
