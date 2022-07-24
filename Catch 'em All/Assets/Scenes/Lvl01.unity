@@ -649,12 +649,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   item: {fileID: 4035468176912360189, guid: 8ecaf480842147025bb734411a0a3261, type: 3}
-  initialTimeBetweenSpawn: 3.3
-  timeDecrement: 0.2
-  minTime: 0.5
+  initialTimeBetweenSpawn: 4
+  timeDecrement: 0.1
+  minTime: 1
   maxY: 5.2
   minY: -3.3
-  spawnX: 12
+  spawnX: 11
 --- !u!1 &208757350
 GameObject:
   m_ObjectHideFlags: 0
@@ -1012,12 +1012,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   item: {fileID: 552101947698204083, guid: 2b52f77773db2b251b773e2c6fd44653, type: 3}
-  initialTimeBetweenSpawn: 3.3
-  timeDecrement: 0.2
-  minTime: 0.5
+  initialTimeBetweenSpawn: 4
+  timeDecrement: 0.1
+  minTime: 1
   maxY: 5.2
   minY: -3.3
-  spawnX: 18
+  spawnX: 17
 --- !u!1 &420831100
 GameObject:
   m_ObjectHideFlags: 0
